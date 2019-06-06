@@ -70,5 +70,3 @@ def main():
 
     result = gstreamer.run_pipeline(user_callback)
 
-if __name__ == '__main__':
-    main()
