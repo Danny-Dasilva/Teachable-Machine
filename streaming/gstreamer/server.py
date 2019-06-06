@@ -7,10 +7,14 @@ import socket
 import io 
 app = Flask(__name__) 
 @app.route('/') 
+def go(): 
+   """Video streaming .""" 
+   return 'functional'
+   
+@app.route('/stream') 
 def index(): 
    """Video streaming .""" 
    return render_template('index.html') 
-
 @app.route('/video_feed') 
 def video_feed(): 
    """Video streaming route. Put this in the src attribute of an img tag.""" 
