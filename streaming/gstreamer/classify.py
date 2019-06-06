@@ -33,7 +33,7 @@ def generate_svg(dwg, text_lines):
       dwg.add(dwg.text(line, insert=(11, y*20+1), fill='black', font_size='20'))
       dwg.add(dwg.text(line, insert=(10, y*20), fill='white', font_size='20'))
 
-def main():
+def streaming():
     default_model_dir = "../all_models"
     default_model = 'mobilenet_v2_1.0_224_quant_edgetpu.tflite'
     default_labels = 'imagenet_labels.txt'

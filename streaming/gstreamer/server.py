@@ -1,4 +1,5 @@
-from classify import main
+from classify import streaming
+
 
 if __name__ == '__main__':
-    main()
+    streaming()
