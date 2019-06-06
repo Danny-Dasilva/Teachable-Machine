@@ -6,12 +6,8 @@ from flask import Flask, render_template, Response
 import socket 
 import io 
 app = Flask(__name__) 
-@app.route('/') 
-def go(): 
-   """Video streaming .""" 
-   return "Hello World!"
 
-@app.route('/stream') 
+@app.route('/') 
 def index(): 
    """Video streaming .""" 
    return render_template('index.html') 
