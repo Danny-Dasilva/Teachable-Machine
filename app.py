@@ -1,10 +1,10 @@
-from flask import Flask
-app = Flask(__name__)
+from apps import run_server
+from classify import add_render_gen_args, render_gen
 
 
-@app.route('/')
-def hello():
-    return "Hello World!"
+def main():
+    run_server(add_render_gen_args, render_gen)
+    
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+main()
