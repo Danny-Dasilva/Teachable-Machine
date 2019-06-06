@@ -68,6 +68,7 @@ def streaming():
       last_time = end_time
       generate_svg(svg_canvas, text_lines)
 
+
     result = gstreamer.run_pipeline(user_callback)
-    return print(result, "result")
+    return generate_svg
 
