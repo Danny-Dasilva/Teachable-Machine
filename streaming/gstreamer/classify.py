@@ -70,5 +70,3 @@ def streaming():
 
 
     result = gstreamer.run_pipeline(user_callback)
-    return generate_svg
-
