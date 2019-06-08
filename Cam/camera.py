@@ -4,7 +4,7 @@ import threading
 import Cam.gstreamer
 import Cam.pipelines
 
-from gst import *
+from Cam.gst import *
 
 class Camera:
     def __init__(self, render_size, inference_size, loop):
