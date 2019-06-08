@@ -265,6 +265,6 @@ def main(args):
 
 
 if __name__ == '__main__':
-    run_server(render_gen)
+    
     sys.exit(main(sys.argv))
 
