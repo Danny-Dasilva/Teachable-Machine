@@ -2,9 +2,9 @@ import argparse
 import logging
 import signal
 
-from camera import make_camera
-from gstreamer import Display, run_gen
-from streaming.server import StreamingServer
+from Cam.camera import make_camera
+from Cam.gstreamer import Display, run_gen
+from Cam.streaming.server import StreamingServer
 
 
 

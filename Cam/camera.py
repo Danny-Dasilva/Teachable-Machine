@@ -1,8 +1,8 @@
 import os
 import threading
 
-import gstreamer
-import pipelines
+import Cam.gstreamer
+import Cam.pipelines
 
 from gst import *
 

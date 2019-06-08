@@ -1,4 +1,4 @@
-from gst import *
+from Cam.gst import *
 
 def decoded_file_src(filename):
     return [
