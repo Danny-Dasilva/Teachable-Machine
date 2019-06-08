@@ -9,7 +9,7 @@ app = Flask(__name__)
 def f():
     sys.exit(main(sys.argv))
 
-@app.route('/start')
+@app.route('/')
 def start():
     global p
     p = Process(target=f, args=('--keyboard'))
@@ -17,5 +17,5 @@ def start():
     return render_template('layout.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
 
