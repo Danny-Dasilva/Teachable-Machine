@@ -20,9 +20,11 @@ import os
 import time
 from Cam.apps import run_server
 from Cam.classify import render_gen
-
+import threading
 from collections import deque, Counter
 from functools import partial
+from multiprocessing import Process
+import os
 
 os.environ['XDG_RUNTIME_DIR']='/run/user/1000'
 
@@ -264,7 +266,12 @@ def main(args):
     ui.wiggleLEDs(4)
 
 
-if __name__ == '__main__':
-    
-    sys.exit(main(sys.argv))
 
+def f():
+    run_server(render_gen)
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv))
+    p = Process(target=f, args=('bob',))
+    p.start()
+    p.join()
