@@ -8,7 +8,7 @@ import logging
 
 
 
-import Cam.utils
+import Cam.utils as utils
 #from apps import run_app
 
 logger = logging.getLogger(__name__)
