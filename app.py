@@ -19,8 +19,8 @@ if __name__ == '__main__':
     global p
     p = Process(target=f)
     p.start()
-    global l
-    l = Process(target=l)
-    l.start()
+    global r
+    r = Process(target=l)
+    r.start()
     
 
