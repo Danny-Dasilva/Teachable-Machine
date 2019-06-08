@@ -260,7 +260,7 @@ def main(args):
 
     print('Initialize Model...')
     teachable = TeachableMachine(args.model, ui)
-
+    run_server(render_gen)
     print('Start Pipeline.')
     result = gstreamer.run_pipeline(teachable.classify)
 
@@ -268,10 +268,7 @@ def main(args):
 
 
 
-def f():
-    run_server(render_gen)
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
-    t = threading.Thread(target=f)
-    t.start()
+   
