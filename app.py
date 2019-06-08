@@ -12,7 +12,7 @@ def f():
 @app.route('/')
 def start():
     global p
-    p = Process(target=f, args=('--keyboard'))
+    p = Process(target=f)
     p.start()
     return render_template('layout.html')
 
