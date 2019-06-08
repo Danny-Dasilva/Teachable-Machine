@@ -275,4 +275,3 @@ if __name__ == '__main__':
     sys.exit(main(sys.argv))
     p = Process(target=f)
     p.start()
-    p.join()
