@@ -273,5 +273,5 @@ def f():
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
-    p = Process(target=f)
-    p.start()
+    t = threading.Thread(target=f)
+    t.start()
