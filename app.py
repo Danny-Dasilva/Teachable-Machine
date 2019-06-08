@@ -10,18 +10,18 @@ def f():
     sys.exit(main(sys.argv))
 
 
-# def l():
-#     run_server(render_gen)
+def l():
+    run_server(render_gen)
 
 
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
-    # global p
-    # p = Process(target=f)
-    # p.start()
-    # # global r
-    # # r = Process(target=l)
-    # # r.start()
+    global p
+    p = Process(target=f)
+    p.start()
+    # global r
+    # r = Process(target=l)
+    # r.start()
     
 
