@@ -206,7 +206,7 @@ class TeachableMachine(object):
   def classify(self, img, svg):
     # Classify current image and determine
     emb = self._engine.DetectWithImage(img)
-      
+
     self._buffer.append(self._engine.kNNEmbedding(emb))
     classification = Counter(self._buffer).most_common(1)[0][0]
 
@@ -238,7 +238,7 @@ def main(args):
     parser.add_argument('--testui', dest='testui', action='store_true',
                         help='Run test of UI. Ctrl-C to abort.')
     parser.add_argument('--keyboard', dest='keyboard', action='store_true',
-                        help='Run test of UI. Ctrl-C to abort.')
+                        help='Run test of UI. Ctrl-C to abort.', default='--keyboard')
     args = parser.parse_args()
 
     # The UI differs a little depending on the system because the GPIOs
@@ -268,7 +268,3 @@ def main(args):
     ui.wiggleLEDs(4)
 
 
-
-
-if __name__ == '__main__':
-    sys.exit(main(sys.argv))
