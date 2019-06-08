@@ -24,6 +24,7 @@ import threading
 from collections import deque, Counter
 from functools import partial
 from multiprocessing import Process
+import multiprocessing as mp
 import os
 
 os.environ['XDG_RUNTIME_DIR']='/run/user/1000'
@@ -272,6 +273,6 @@ def f():
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
-    p = Process(target=f, args=('bob',))
+    p = Process(target=f)
     p.start()
     p.join()
