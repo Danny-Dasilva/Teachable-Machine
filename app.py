@@ -3,11 +3,13 @@ import sys
 from flask import Flask, render_template
 from multiprocessing import Process
 import time
+from Cam.apps import run_server
+from Cam.classify import render_gen
 
 app = Flask(__name__)
 
 def f():
-    sys.exit(main(sys.argv))
+    run_server(render_gen)
 
 @app.route('/')
 def start():
