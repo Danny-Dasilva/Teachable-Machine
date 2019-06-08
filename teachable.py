@@ -18,6 +18,8 @@ import argparse
 import sys
 import os
 import time
+from Cam.apps import run_server
+from Cam.classify import render_gen
 
 from collections import deque, Counter
 from functools import partial
@@ -263,5 +265,6 @@ def main(args):
 
 
 if __name__ == '__main__':
+    run_server(render_gen)
     sys.exit(main(sys.argv))
 
