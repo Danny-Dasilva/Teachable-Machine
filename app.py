@@ -16,10 +16,12 @@ def l():
 
 
 if __name__ == '__main__':
-    main(sys.argv)
+    sys.exit(main(sys.argv))
+
     # global p
     # p = Process(target=f)
     # p.start()
+
     global r
     r = Process(target=l)
     r.start()
